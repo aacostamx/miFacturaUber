@@ -1,0 +1,74 @@
+﻿@model miFacturaUber.Models.FacturaUber
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FacturaUber</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalFactura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalFactura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComisionUber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComisionUber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SueldoChofer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SueldoChofer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gasolina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gasolina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlanCelular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlanCelular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtrosGastos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtrosGastos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rango)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rango)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FacturaUberID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<miFacturaUber.Models.FacturaUber>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalFactura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComisionUber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SueldoChofer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gasolina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlanCelular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtrosGastos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rango)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalNeto)
+        </th>
+        <th>Acciones</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalFactura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComisionUber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SueldoChofer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gasolina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlanCelular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtrosGastos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rango)
+        </td>
+        <td>
+           @Html.DisplayFor(modelItem => item.TotalNeto)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FacturaUberID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FacturaUberID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FacturaUberID })
+        </td>
+    </tr>
+}
+
+</table>
